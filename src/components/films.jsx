@@ -8,7 +8,7 @@ const FilmCard = (props) => {
                     <div className="col-md-6" key={`user-card-${props.id}`}>
                         <div className="card shadow my-2">
                             <div className="card-body">
-                                <div><img className="moviePosters" src={props.film.image} className="card-img-top" /></div>
+                                <div><img className="moviePosters card-img-top" src={props.film.image}/></div>
                                 <hr/>
                                 <h4 className="card-title">{props.film.title}</h4>
                                 <hr />
