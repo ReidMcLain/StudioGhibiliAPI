@@ -11,19 +11,27 @@ const App = () => {
     const [filmsLoaded, setFilmsLoaded] = useState(false);
 
     const getPeople = async () => {
-        const response = await fetch('https://ghibliapi.herokuapp.com/people')
-        const data = await response.json();
-        setPeople(data);
-        setFilmsLoaded(false);
-        setPeopleLoaded(true);
+        try {
+            const response = await fetch('https://ghibliapi.herokuapp.com/people')
+            const data = await response.json();
+            setPeople(data);
+            setPeopleLoaded(true);
+            setFilmsLoaded(false);
+        } catch (err) {
+            alert(err);
+        }
     };
 
     const getFilms = async () => {
-        const response = await fetch('https://ghibliapi.herokuapp.com/films')
-        const data = await response.json();
-        setFilms(data);
-        setPeopleLoaded(false);
-        setFilmsLoaded(true);
+        try {
+            const response = await fetch('https://ghibliapi.herokuapp.com/films')
+            const data = await response.json();
+            setFilms(data);
+            setFilmsLoaded(true);
+            setPeopleLoaded(false);
+        } catch (err) {
+            alert(err);
+        }
     };
 
     if (peopleLoaded) {
