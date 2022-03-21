@@ -18,7 +18,7 @@ const FilmCard = (props) => {
                                 <hr />
                                 <p className="card-text"><span className="text-muted">Released in </span>{props.film.release_date}</p>
                                 <hr />
-                                <p className="card-text"><span className="text-muted">Rotten Tomato Score </span>{props.film.rt_score}</p>
+                                <p className="card-text"><span className="text-muted">Rotten Tomato Score </span>{props.film.rt_score > 50 ? <span className="text-success">{props.film.rt_score}</span> : <span className="text-danger">{props.film.rt_score}</span> }</p>
                                 <hr />
                                 <p className="card-text">{props.film.description}</p>
                                 <a target="_blank" href={"https://ghibliapi.herokuapp.com/films/" + props.film.id}>API Resource Link</a>
