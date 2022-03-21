@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+}
+
+#TotoroPic {
+  height: 300px;
+}
+
+#TotoroDiv {
+    justify-content: center;
+    align-items: center;
+}
